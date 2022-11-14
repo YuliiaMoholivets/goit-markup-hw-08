@@ -1,0 +1,45 @@
+.features-heading,
+.portfolio-heading {
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    margin: -1px;
+}
+
+.features__thumb{
+    height: 120px;
+    width: 270px;
+    border-radius: 4px;
+    background-color: $bg-color-gray;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.features__list {
+    display: flex;
+    gap: 30px;
+}
+.features__title {
+    color: $title-text-color;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    margin-bottom: 10px;   
+}
+
+.features__text {
+    color: $primary-text-color;
+    line-height: 1.71;   
+}
+
+
+

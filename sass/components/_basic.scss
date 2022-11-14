@@ -1,0 +1,82 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+body {
+    background: $primary-bt-color;
+    color: $primary-text-color;
+    font-size: 14px;
+    font-family: Roboto, sans-serif;
+    letter-spacing: 0.03em;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    width: 1200px;
+}
+
+.section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+
+.image-block {
+    display: block;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    border: 0;
+    clip: rect(0 0 0 0);
+}
+
+.link {
+    text-decoration: none;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.heading {
+    font-size: 36px;
+    line-height: 1.17;
+    text-align: center;
+}
+
+.button {
+    font-family: inherit;
+    cursor: pointer;
+    text-align: center;
+    color: $primary-bt-color;
+    background-color: $accent-color;
+}
+.icon {
+    transition: fill cubic-bezier(0.4, 0, 0.2, 1);
+}
