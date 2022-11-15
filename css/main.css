@@ -116,7 +116,12 @@ img {
 }
 
 .site-nav {
-  margin-left: 93px;
+  margin-left: 88px;
+}
+@media screen and (min-width: 768px) {
+  .site-nav {
+    margin-left: 93px;
+  }
 }
 
 .site-nav__list {
@@ -125,7 +130,6 @@ img {
 @media screen and (min-width: 768px) {
   .site-nav__list {
     display: flex;
-    margin-right: 96px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -136,6 +140,11 @@ img {
 
 .site-nav__item {
   margin-left: 50px;
+}
+@media screen and (min-width: 768px) {
+  .site-nav__item:first-child {
+    margin-left: 0;
+  }
 }
 
 @media (min-width: 768px) {
@@ -324,7 +333,7 @@ img {
   font-size: 18px;
   line-height: 1.22;
   letter-spacing: 0.02em;
-  color: #2196F3;
+  color: #2196f3;
   padding: 0 10px;
 }
 @media (max-width: 480px) {
@@ -342,11 +351,18 @@ img {
   line-height: 1.14;
   letter-spacing: 0.02em;
 }
+.auth-nav__item:first-child {
+  margin-bottom: 10px;
+}
+@media screen and (min-width: 1200px) {
+  .auth-nav__item:first-child {
+    margin-right: 30px;
+    margin-bottom: 0;
+  }
+}
 
 .auth-nav__link {
   display: flex;
-  padding-top: 32px;
-  padding-bottom: 32px;
   color: #757575;
   text-decoration: none;
   align-items: center;
@@ -354,6 +370,11 @@ img {
 }
 .auth-nav__link:hover, .auth-nav__link:focus {
   color: #2196F3;
+}
+@media screen and (min-width: 768px) {
+  .auth-nav__link {
+    padding: 0;
+  }
 }
 
 .auth-nav {
@@ -364,12 +385,13 @@ img {
   .auth-nav {
     display: flex;
     margin: 0;
-    flex-wrap: wrap;
+    margin-left: auto;
+    flex-direction: column;
   }
 }
 @media screen and (min-width: 1200px) {
   .auth-nav {
-    flex-wrap: nowrap;
+    flex-direction: row;
   }
 }
 
@@ -1054,13 +1076,13 @@ ul {
 @media screen and (min-width: 1200px) {
   .subscribe__input {
     margin-right: 12px;
-    min-width: 358px;
+    width: 358px;
   }
 }
 @media screen and (max-width: 480px) {
   .subscribe__input {
     max-width: 450px;
-    min-width: 100%;
+    width: 100%;
   }
 }
 
@@ -1080,16 +1102,12 @@ ul {
   font-size: 16px;
   line-height: 1.88;
   letter-spacing: 0.06em;
-  margin-top: 20px;
+  margin: 20px auto 0;
 }
 @media screen and (min-width: 1200px) {
   .subscribe__button {
     gap: 10px;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .subscribe__button {
-    margin-top: 0;
+    margin: 0 0 0 20px;
   }
 }
 
