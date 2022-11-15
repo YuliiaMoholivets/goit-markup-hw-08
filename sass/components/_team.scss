@@ -1,49 +1,89 @@
 .team {
+    background: 100%;
     background-color: $bg-color-gray;
+   
 }
 
 .team__list{
-    display: flex;
-    margin-top: 50px;
-    text-align: center;
-    margin-left: calc(-1 * $list-items-gap);
-}
+    display: block;
+    
+        @media screen and (min-width: 768px) {
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+            gap: 30px;
+        }
+    
+        @media screen and (min-width: 1200px) {
+            flex-wrap: nowrap;
+        }
+    }
+    
 
 .team__title-name {
     color: $title-text-color;
     font-weight: 500;
     font-size: 16px;
     line-height: 1.19;
+    margin-bottom: 10px;
 }
 
 .team__text {
     color: $primary-text-color;
     font-size: 16px;
     line-height: 1.19;
-    margin-top: 10px;
+    margin-bottom: 16px;
 }
 
 .team__title {
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 1.17;
-    color: $title-text-color;
+    font-weight: bold;
+    color:#000;
+    font-size: 28px;
+    line-height: 1.18;
+    margin-bottom: 30px;
     text-align: center;
+
+    @media screen and (min-width: 1200px) {
+        font-size: 36px;
+        line-height: 1.16;
+        margin-bottom: 50px;
+    }
 }
 
 .team__item {
-    flex-basis: calc(100% / 3 - $list-items-gap);
-    margin-left: $list-items-gap;
-
+    display: block;
+    text-align: center;
     background-color: $primary-bt-color;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
         0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
+    &+& {
+            margin-top: 30px;
     
+            @media screen and (min-width: 768px) {
+                margin-top: 0;
+            }
+        }
+    
+        @media screen and (min-width: 768px) {
+            width: calc((100% - 30px) / 2);
+        }
+    
+        @media screen and (min-width: 1200px) {
+            width: 270px;
+        }
+    
+}
+.team__image-block {
+    width: 100%; 
+    margin: 0 auto;        
 }
 
 .team__description {
-    padding: 30px 24px; 
+    padding: 30px 0 24px;;
+    @media screen and (min-width: 1200px) {
+            padding: 30px 0;
+        }
 }
 
 .social-links {

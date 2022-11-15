@@ -1,27 +1,81 @@
 .site-footer {
-    padding-top: 60px;
-    padding-bottom: 60px;
+    padding: 60px 0;
     background-color: $primary-brg-color;
 }
 
 .site-footer__container {
     display: flex;
-    align-items: baseline;
+        flex-direction: column;
+        align-items: center;
+    
+        @media screen and (min-width: 768px) {
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-around
+        }
+    
+        @media screen and (min-width: 1200px) {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            align-items: baseline;
+        }
 }
 
 .site-footer__nav-links {
-    width: 231px;
+    display: flex;
+        flex-direction: column;
+        align-items: center;
+    
+        @media screen and (min-width: 1200px) {
+            align-items: flex-start;
+        }
 }
 
 .site-footer__logo {
     color: $primary-bt-color;
     &--accent{
-        color:$accent-color
+        color:$accent-color;
+        margin-right: 0;
+            padding: 0;
     }
+}
+ul {
+    list-style-type: none;
+}
+.footer-contacts__item:not(:first-child) {
+    margin-top: 8px;
+
+    @media screen and (min-width: 1200px) {
+        margin-top: 9px;
+    }
+}
+.footer-contacts {
+    margin-top: 20px;
+    margin-bottom: 60px;
+    display: flex;
+        font-style: normal;
+        flex-direction: column;
+        text-align: center;
+        @media screen and (min-width: 1200px) {
+                text-align: left;
+            }
 }
 
 .site-footer__social-links {
-    margin-left: 70px;
+    display: flex;
+        flex-direction: column;
+        margin-bottom: 60px;
+    
+        @media screen and (min-width: 768px) {
+            align-self: flex-start;
+            margin-bottom: 0;
+        }
+    
+        @media screen and (min-width: 1200px) {
+            margin: 0;
+            align-self: baseline;
+        }
 }
 
 .site-footer__heading {
@@ -29,6 +83,10 @@
     line-height: 1.14;
     text-transform: uppercase;
     color: $primary-bt-color;
+    text-align: center;
+    @media screen and (min-width: 1200px) {
+            text-align: left;
+        }
 }
 
 .site-footer__social-list {
@@ -40,10 +98,5 @@
     background-color: rgba(255, 255, 255, 0.1);
 }
 
-.footer-contacts {
-    margin-top: 20px;
-}
 
-.footer-contacts__item:not(:first-child) {
-    margin-top: 9px;
-}
+

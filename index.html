@@ -21,13 +21,15 @@
 <body>
 <header class="page-header">
     <div class="container header">
-        <a href="./index.html" class="logo"><span class="logo--accent">Web</span>Studio</a>
+        <a href="./index.html" class="logo"><span class="logo--accent">Web</span>Studio</a>    
         <nav class="site-nav">
+            <div class="site-nav__wrap">
             <ul class="site-nav__list">
                 <li class="site-nav__item"><a class="site-nav__link site-nav__link-current" href="">Студія</a></li>
                 <li class="site-nav__item"><a class="site-nav__link" href="./portfolio.html">Портфоліо</a></li>
                 <li class="site-nav__item"><a class="site-nav__link" href="">Контакти</a></li>
             </ul>
+            </div>
             </nav>
             <ul class="auth-nav">
                 <li class="auth-nav__item">
@@ -39,6 +41,36 @@
                             <use href="./images/icons.svg#icon-smartphone"></use>
                         </svg>+38 096 111 11 11</a></li>
             </ul>
+            <button class="menu-toggle js-open-menu" type="button" aria-expanded="false" aria-controls="mobile-menu">
+                <svg class="icon icon-menu_24px" width="24" height="16">
+                    <use href="./images/icons.svg/symbol-defs.svg#icon-menu_24px"></use>
+                </svg>
+            </button>
+            <div class="menu-container js-menu-container" id="mobile-menu">
+                <button class="menu-toggle js-close-menu">
+                    <svg class="icon icon-close" width="19" height="19">
+                        <use href="./images/icons.svg/symbol-defs.svg#icon-close"></use>
+                    </svg>
+                </button>
+                <ul class="mobile-menu">
+                    <li><a href="./index.html" class="mobile-link mobile-link--blue">Студія</a></li>
+                    <li><a href="./portfolio.html" class="mobile-link">Портфоліо</a></li>
+                    <li><a href="#" class="mobile-link">Контакти</a></li>
+                </ul>
+                <div class="mobile-menu-wrap">
+                    <ul class="mobile-menu mobile-contacts">
+                        <li><a class="mobile-link contacts-link mobile-link--blue" href="tel:+380961111111">+38 096 111 11 11</a></li>
+                        <li><a class="mobile-link contacts-link contacts-link-email"
+                                href="mailto:info@devstudio.com">info@devstudio.com</a></li>
+                    </ul>
+                    <ul class="mobile-socials">
+                        <li><a href="#" class="mobile-link socials-link socials-link--primary">Instagram</a></li>
+                        <li><a href="#" class="mobile-link socials-link">Twitter</a></li>
+                        <li><a href="#" class="mobile-link socials-link">Facebook</a></li>
+                        <li><a href="#" class="mobile-link socials-link">LinkedIn</a></li>
+                    </ul>
+                    </div>
+                    </div>
         </div>
     </header>
     <main>
@@ -176,7 +208,15 @@
                 <h2 class="team__title">Наша команда</h2>
                 <ul class="team__list">
                     <li class="team__item">
-                        <img class="team__image-block" src="./images/img4.jpg" alt="Ігор Дем'яненко" width="270">
+                        <picture>
+                            <source srcset="./images/player_1_1200.jpg 1x, ./images/player_1_1200@2x.jpg 2x"
+                                media="(min-width: 1200px)" />
+                            <source srcset="./images/player_1_768.jpg 1x, ./images/player_1_768@2x.jpg 2x"
+                                media="(min-width: 768px)" />
+                            <source srcset="./images/player_1_480.jpg 1x, ./images/player_1_480@2x.jpg 2x"
+                                media="(max-width: 767px)" />
+                            <img class="team__image-block" src="./images/player_1_480.jpg" alt="player_1" />
+                        </picture>
                         <div class="team__description">
                             <h3 class="team__title-name">Ігор Дем'яненко</h3>
                             <p lang="en" class="team__text">Product Designer</p>
@@ -213,7 +253,12 @@
                         </div>
                     </li>
                     <li class="team__item">
-                        <img class="team__image-block" src="./images/img5.jpg" alt="Ольга Рєпіна" width="270">
+                        <picture>
+                            <source srcset="./images/player_2_1200.jpg 1x, ./images/player_2_1200@2x.jpg 2x" media="(min-width: 1200px)" />
+                            <source srcset="./images/player_2_768.jpg 1x, ./images/player_2_768@2x.jpg 2x" media="(min-width: 768px)" />
+                            <source srcset="./images/player_2_480.jpg 1x, ./images/player_2_480@2x.jpg 2x" media="(max-width: 767px)" />
+                            <img class="team__image-block" src="./images/player_2_480.jpg" alt="player_2" />
+                        </picture>
                         <div class="team__description">
                             <h3 class="team__title-name">Ольга Рєпіна</h3>
                             <p lang="en" class="team__text">Frontend Developer</p>
@@ -250,7 +295,12 @@
                         </div>
                     </li>
                     <li class="team__item">
-                        <img class="team__image-block" src="./images/img6.jpg" alt="Микола Тарасов" width="270">
+                        <picture>
+                            <source srcset="./images/player_3_1200.jpg 1x, ./images/player_3_1200@2x.jpg 2x" media="(min-width: 1200px)" />
+                            <source srcset="./images/player_3_768.jpg 1x, ./images/player_3_768@2x.jpg 2x" media="(min-width: 768px)" />
+                            <source srcset="./images/player_3_480.jpg 1x, ./images/player_3_480@2x.jpg 2x" media="(max-width: 767px)" />
+                            <img class="team__image-block" src="./images/player_3_480.jpg" alt="player_3" />
+                        </picture>
                         <div class="team__description">
                             <h3 class="team__title-name">Микола Тарасов</h3>
                             <p lang="en" class="team__text">Marketing</p>
@@ -287,7 +337,12 @@
                         </div>
                     </li>
                     <li class="team__item">
-                        <img class="team__image-block" src="./images/img7.jpg" alt="Михайло Єрмаков" width="270">
+                        <picture>
+                            <source srcset="./images/player_4_1200.jpg 1x, ./images/player_4_1200@2x.jpg 2x" media="(min-width: 1200px)" />
+                            <source srcset="./images/player_4_768.jpg 1x, ./images/player_4_768@2x.jpg 2x" media="(min-width: 768px)" />
+                            <source srcset="./images/player_4_480.jpg 1x, ./images/player_4_480@2x.jpg 2x" media="(max-width: 767px)" />
+                            <img class="team__image-block" src="./images/player_4_480.jpg" alt="player_4"/>
+                        </picture>
                         <div class="team__description">
                             <h3 class="team__title-name">Михайло Єрмаков</h3>
                             <p lang="en" class="team__text">Marketing</p>
@@ -446,6 +501,10 @@
             </div>
         </div>
     </footer>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+        integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+        crossorigin="anonymous"></script>
+    <script defer src="js/mobile-menu.js"></script>
     <script src="./js/modal.js"></script>
 </body>
 
