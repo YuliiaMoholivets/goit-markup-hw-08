@@ -12,7 +12,7 @@
 
 .modal {
     position: absolute;
-    width: 528px;
+    width: 450px;
     top: 50%;
     left: 50%;
     background-color: $primary-bt-color;
@@ -22,6 +22,9 @@
     z-index: 5;
     transform: translate(-50%, -50%);
     padding: 40px 39px 40px 41px;
+    @media screen and (min-width: 1200px) {
+            min-width: 528px;
+        }
 }
 
 .is-hidden {
@@ -129,9 +132,17 @@
 
 .checkbox-wrapper {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 25px;
+        align-items: flex-end;
+        margin-top: 20px;
+    
+        @media screen and (min-width: 1200px) {
+            justify-content: center;
+            align-items: center
+        }
+    
+        @media screen and (max-width: 480px) {
+            align-items: center
+        }
 }
 
 .checkbox-container {
@@ -177,10 +188,16 @@
 }
 
 .checkbox__text {
-    font-size: 14px;
+    font-size: 12px;
     line-height: 1.71;
     letter-spacing: 0.03em;
     color: $primary-text-color;
+    margin-left: 8px;
+    
+        @media screen and (min-width: 1200px) {
+            font-size: var(--fs-base);
+            line-height: 1.71;
+        }
 }
 
 .checkbox__text-blue {
