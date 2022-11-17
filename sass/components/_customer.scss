@@ -1,10 +1,8 @@
-.customer_title {
-    color: $title-text-color;
-    font-weight: bold;
-    font-size: 36px;
-    line-height: 1.17;
-    text-align: center;
-    margin-bottom: 50px;
+.customer__list {
+    display: flex;
+flex-wrap: wrap;
+justify-content: center;
+
 }
 
 .customer_content {
@@ -54,11 +52,11 @@ width: 100%;
 }
 
 .customer__link {
-    display: flex;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 170px;
-    height: 90px;
+    width: 100%;
+    height: 92px;
     color: $text-color-social;
     border: 1px solid $text-color-social;
     border-radius: 4px;
@@ -73,4 +71,16 @@ width: 100%;
 .clients__icon {
     --color1: currentColor;
     height: 50px;
+}
+.customer_title {
+    color: $title-text-color;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 1.1;
+    text-align: center;
+    margin-bottom: 50px;
+    @media screen and (min-width: 1200px) {
+        font-size: 36px;
+            line-height: 1.17;
+        }
 }

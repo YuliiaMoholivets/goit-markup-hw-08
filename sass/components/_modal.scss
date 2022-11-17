@@ -12,7 +12,8 @@
 
 .modal {
     position: absolute;
-    width: 450px;
+    max-width: 450px;
+    width: 100%;
     top: 50%;
     left: 50%;
     background-color: $primary-bt-color;

@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html lang="uk">
 
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Webstudio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/0.6.0/modern-normalize.min.css"
-        integrity="sha256-a9JO7L1jGkja9va1xGMWEJspCfU/b9Vn5u/O5MdnKhw=" crossorigin="anonymous">
-<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
-    rel="stylesheet">
-    
-    <link rel="stylesheet" href="./css/main.min.css">
+        integrity="sha256-a9JO7L1jGkja9va1xGMWEJspCfU/b9Vn5u/O5MdnKhw=" crossorigin="anonymous" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
+        rel="stylesheet" />
+
+    <link rel="stylesheet" href="./css/main.min.css" />
 </head>
 
 <body>
@@ -19,11 +21,19 @@
     <div class="container header">
         <a href="./index.html" class="logo"><span class="logo--accent">Web</span>Studio</a>
         <nav class="site-nav">
-            <ul class="site-nav__list">
-                <li class="site-nav__item"><a href="./index.html" class="site-nav__link">Студія</a></li>
-                <li class="site-nav__item"><a class="site-nav__link site-nav__link-current" href="">Портфоліо</a></li>
-                <li class="site-nav__item"><a class="site-nav__link" href="">Контакти</a></li>
-            </ul>
+            <div class="site-nav__wrap">
+                <ul class="site-nav__list">
+                    <li class="site-nav__item">
+                        <a class="site-nav__link " href="./index.html">Студія</a>
+                    </li>
+                    <li class="site-nav__item">
+                        <a class="site-nav__link site-nav__link-current" href="">Портфоліо</a>
+                    </li>
+                    <li class="site-nav__item">
+                        <a class="site-nav__link" href="">Контакти</a>
+                    </li>
+                </ul>
+            </div>
         </nav>
         <ul class="auth-nav">
             <li class="auth-nav__item">
@@ -32,11 +42,54 @@
                         <use href="./images/icons.svg#icon-envelope"></use>
                     </svg>info@devstudio.com</a>
             </li>
-            <li class="auth-nav__item"><a class="auth-nav__link" href="tel:+380961111111"><svg
-                        class="auth-nav__icon-nav" height="16" width="10">
+            <li class="auth-nav__item">
+                <a class="auth-nav__link" href="tel:+380961111111"><svg class="auth-nav__icon-nav" height="16"
+                        width="10">
                         <use href="./images/icons.svg#icon-smartphone"></use>
-                    </svg>+38 096 111 11 11</a></li>
+                    </svg>+38 096 111 11 11</a>
+            </li>
         </ul>
+        <button class="menu-toggle js-open-menu" type="button" aria-expanded="false" aria-controls="mobile-menu">
+            <svg class="icon icon-menu" width="24" height="16">
+                <use href="./images/symbol-defs.svg#icon-menu_24px"></use>
+            </svg>
+        </button>
+        <div class="menu-container js-menu-container" id="mobile-menu">
+            <button class="menu-toggle js-close-menu">
+                <svg class="icon icon-close" width="19" height="19">
+                    <use href="./images/symbol-defs.svg#icon-close"></use>
+                </svg>
+            </button>
+            <ul class="mobile-menu">
+                <li>
+                    <a href="./index.html" class="mobile-link ">Студія</a>
+                </li>
+                <li>
+                    <a href="./portfolio.html" class="mobile-link mobile-link--blue">Портфоліо</a>
+                </li>
+                <li><a href="#" class="mobile-link">Контакти</a></li>
+            </ul>
+            <div class="mobile-menu-wrap">
+                <ul class="mobile-menu mobile-contacts">
+                    <li>
+                        <a class="mobile-link contacts-link mobile-link--blue" href="tel:+380961111111">+38 096 111
+                            11 11</a>
+                    </li>
+                    <li>
+                        <a class="mobile-link contacts-link contacts-link-email"
+                            href="mailto:info@devstudio.com">info@devstudio.com</a>
+                    </li>
+                </ul>
+                <ul class="mobile-socials">
+                    <li>
+                        <a href="#" class="mobile-link socials-link socials-link--primary">Instagram</a>
+                    </li>
+                    <li><a href="#" class="mobile-link socials-link">Twitter</a></li>
+                    <li><a href="#" class="mobile-link socials-link">Facebook</a></li>
+                    <li><a href="#" class="mobile-link socials-link">LinkedIn</a></li>
+                </ul>
+            </div>
+        </div>
     </div>
 </header>
     <main>
@@ -64,7 +117,16 @@
     <li class="card-set__item">
         <a href="" class="card-set__link link">
             <div class="card-set__img">
-                <img src="./images/img8.jpg" alt="" width="370" class="card-set__image">
+                <picture>
+                    <source
+                        srcset="images/portfolio_1200/portfolio_1_1200.jpg 1x, ./images/portfolio_1200_2x/portfolio_1_1200@2x.jpg 2x"
+                        media="(min-width: 1200px)" />
+                    <source srcset="./images/portfolio_768/portfolio_1_768.jpg 1x, ./images/portfolio_768_2x/portfolio_1_768@2x.jpg 2x"
+                        media="(min-width: 768px)" />
+                    <source srcset="./images/portfolio_480/portfolio_1_480.jpg 1x, ./images/portfolio_480_2x/portfolio_1_480@2x.jpg 2x"
+                        media="(max-width: 767px)" />
+                    <img class="card-set__image" src="./images/portfolio_480/portfolio_1_480.jpg" alt="portfolio_1">
+                </picture>
                 <div class="card-set__p">
                     <p class="filter-about">
                         Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить
@@ -83,7 +145,16 @@
     <li class="card-set__item">
         <a href="" class="card-set__link link">
             <div class="card-set__img">
-                <img src="./images/img9.jpg" alt="" width="370" class="card-set__image">
+                <picture>
+                    <source
+                        srcset="images/portfolio_1200/portfolio_2_1200.jpg 1x, ./images/portfolio_1200_2x/portfolio_2_1200@2x.jpg 2x"
+                        media="(min-width: 1200px)" />
+                    <source srcset="./images/portfolio_768/portfolio_2_768.jpg 1x, ./images/portfolio_768_2x/portfolio_2_768@2x.jpg 2x"
+                        media="(min-width: 768px)" />
+                    <source srcset="./images/portfolio_480/portfolio_2_480.jpg 1x, ./images/portfolio_480_2x/portfolio_2_480@2x.jpg 2x"
+                        media="(max-width: 767px)" />
+                    <img class="card-set__image" src="./images/portfolio_480/portfolio_2_480.jpg" alt="portfolio_2">
+                </picture>
                 <div class="card-set__p">
                     <p class="filter-about">
                         Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить
@@ -102,7 +173,16 @@
     <li class="card-set__item">
         <a href="" class="card-set__link link">
             <div class="card-set__img">
-                <img src="./images/img10.jpg" alt="" width="370" class="card-set__image">
+            <picture>
+                <source
+                    srcset="images/portfolio_1200/portfolio_3_1200.jpg 1x, ./images/portfolio_1200_2x/portfolio_3_1200@2x.jpg 2x"
+                    media="(min-width: 1200px)" />
+                <source srcset="./images/portfolio_768/portfolio_3_768.jpg 1x, ./images/portfolio_768_2x/portfolio_3_768@2x.jpg 2x"
+                    media="(min-width: 768px)" />
+                <source srcset="./images/portfolio_480/portfolio_3_480.jpg 1x, ./images/portfolio_480_2x/portfolio_3_480@2x.jpg 2x"
+                    media="(max-width: 767px)" />
+                <img class="card-set__image" src="./images/portfolio_480/portfolio_3_480.jpg" alt="portfolio_3">
+            </picture>
                 <div class="card-set__p">
                     <p class="filter-about">
                         Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить
@@ -120,7 +200,16 @@
     <li class="card-set__item">
         <a href="" class="card-set__link link">
             <div class="card-set__img">
-                <img src="./images/img11.jpg" alt="" width="370" class="card-set__image">
+                <picture>
+                    <source
+                        srcset="images/portfolio_1200/portfolio_4_1200.jpg 1x, ./images/portfolio_1200_2x/portfolio_4_1200@2x.jpg 2x"
+                        media="(min-width: 1200px)" />
+                    <source srcset="./images/portfolio_768/portfolio_4_768.jpg 1x, ./images/portfolio_768_2x/portfolio_4_768@2x.jpg 2x"
+                        media="(min-width: 768px)" />
+                    <source srcset="./images/portfolio_480/portfolio_4_480.jpg 1x, ./images/portfolio_480_2x/portfolio_4_480@2x.jpg 2x"
+                        media="(max-width: 767px)" />
+                    <img class="card-set__image" src="./images/portfolio_480/portfolio_4_480.jpg" alt="portfolio_4">
+                </picture>
                 <div class="card-set__p">
                     <p class="filter-about">
                         Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить
@@ -138,7 +227,16 @@
     <li class="card-set__item">
         <a href="" class="card-set__link link">
             <div class="card-set__img">
-                <img src="./images/img12.jpg" alt="" width="370" class="card-set__image">
+            <picture>
+                <source
+                    srcset="images/portfolio_1200/portfolio_5_1200.jpg 1x, ./images/portfolio_1200_2x/portfolio_5_1200@2x.jpg 2x"
+                    media="(min-width: 1200px)" />
+                <source srcset="./images/portfolio_768/portfolio_5_768.jpg 1x, ./images/portfolio_768_2x/portfolio_5_768@2x.jpg 2x"
+                    media="(min-width: 768px)" />
+                <source srcset="./images/portfolio_480/portfolio_5_480.jpg 1x, ./images/portfolio_480_2x/portfolio_5_480@2x.jpg 2x"
+                    media="(max-width: 767px)" />
+                <img class="card-set__image" src="./images/portfolio_480/portfolio_5_480.jpg" alt="portfolio_5">
+            </picture>
                 <div class="card-set__p">
                     <p class="filter-about">
                         Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить
@@ -156,7 +254,16 @@
     <li class="card-set__item">
         <a href="" class="card-set__link link">
             <div class="card-set__img">
-                <img src="./images/img13.jpg" alt="" width="370" class="card-set__image">
+                <picture>
+                    <source
+                        srcset="images/portfolio_1200/portfolio_6_1200.jpg 1x, ./images/portfolio_1200_2x/portfolio_6_1200@2x.jpg 2x"
+                        media="(min-width: 1200px)" />
+                    <source srcset="./images/portfolio_768/portfolio_6_768.jpg 1x, ./images/portfolio_768_2x/portfolio_6_768@2x.jpg 2x"
+                        media="(min-width: 768px)" />
+                    <source srcset="./images/portfolio_480/portfolio_6_480.jpg 1x, ./images/portfolio_480_2x/portfolio_6_480@2x.jpg 2x"
+                        media="(max-width: 767px)" />
+                    <img class="card-set__image" src="./images/portfolio_480/portfolio_6_480.jpg" alt="portfolio_6">
+                </picture>
                 <div class="card-set__p">
                     <p class="filter-about">
                         Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить
@@ -174,7 +281,16 @@
     <li class="card-set__item">
         <a href="" class="card-set__link link">
             <div class="card-set__img">
-                <img src="./images/img14.jpg" alt="" width="370" class="card-set__image">
+            <picture>
+                <source
+                    srcset="images/portfolio_1200/portfolio_7_1200.jpg 1x, ./images/portfolio_1200_2x/portfolio_7_1200@2x.jpg 2x"
+                    media="(min-width: 1200px)" />
+                <source srcset="./images/portfolio_768/portfolio_7_768.jpg 1x, ./images/portfolio_768_2x/portfolio_7_768@2x.jpg 2x"
+                    media="(min-width: 768px)" />
+                <source srcset="./images/portfolio_480/portfolio_7_480.jpg 1x, ./images/portfolio_480_2x/portfolio_7_480@2x.jpg 2x"
+                    media="(max-width: 767px)" />
+                <img class="card-set__image" src="./images/portfolio_480/portfolio_7_480.jpg" alt="portfolio_7">
+            </picture>
                 <div class="card-set__p">
                     <p class="filter-about">
                         Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить
@@ -192,7 +308,16 @@
     <li class="card-set__item">
         <a href="" class="card-set__link link">
             <div class="card-set__img">
-                <img src="./images/img15.jpg" alt="" width="370" class="card-set__image">
+                <picture>
+                    <source
+                        srcset="images/portfolio_1200/portfolio_8_1200.jpg 1x, ./images/portfolio_1200_2x/portfolio_8_1200@2x.jpg 2x"
+                        media="(min-width: 1200px)" />
+                    <source srcset="./images/portfolio_768/portfolio_8_768.jpg 1x, ./images/portfolio_768_2x/portfolio_8_768@2x.jpg 2x"
+                        media="(min-width: 768px)" />
+                    <source srcset="./images/portfolio_480/portfolio_8_480.jpg 1x, ./images/portfolio_480_2x/portfolio_8_480@2x.jpg 2x"
+                        media="(max-width: 767px)" />
+                    <img class="card-set__image" src="./images/portfolio_480/portfolio_8_480.jpg" alt="portfolio_8">
+                </picture>
                 <div class="card-set__p">
                     <p class="filter-about">
                         Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить
@@ -210,7 +335,16 @@
     <li class="card-set__item">
         <a href="" class="card-set__link link">
             <div class="card-set__img">
-                <img src="./images/img16.jpg" alt="" width="370" class="card-set__image">
+            <picture>
+                <source
+                    srcset="images/portfolio_1200/portfolio_9_1200.jpg 1x, ./images/portfolio_1200_2x/portfolio_9_1200@2x.jpg 2x"
+                    media="(min-width: 1200px)" />
+                <source srcset="./images/portfolio_768/portfolio_9_768.jpg 1x, ./images/portfolio_768_2x/portfolio_9_768@2x.jpg 2x"
+                    media="(min-width: 768px)" />
+                <source srcset="./images/portfolio_480/portfolio_9_480.jpg 1x, ./images/portfolio_480_2x/portfolio_9_480@2x.jpg 2x"
+                    media="(max-width: 767px)" />
+                <img class="card-set__image" src="./images/portfolio_480/portfolio_9_480.jpg" alt="portfolio_9">
+            </picture>
                 <div class="card-set__p">
                     <p class="filter-about">
                         Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить
@@ -296,7 +430,11 @@
         </div>
     </div>
 </footer>
-<script src="./js/modal.js"></script>
+ <script defer src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+        integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+        crossorigin="anonymous"></script>
+    <script defer src="js/mobile-menu.js"></script>
+    <script src="./js/modal.js"></script>
 </body>
 
 </html>

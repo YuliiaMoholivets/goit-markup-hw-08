@@ -1,13 +1,21 @@
 .option {
     display: flex;
-    justify-content: center;
-    margin-bottom: 50px;
+        flex-wrap: wrap;
+        padding-top: 94px;
+        padding-bottom: 50px;
+    
+        @media screen and (min-width: 768px) {
+            justify-content: center;
+            flex-wrap: nowrap;
+        }
 }
 
 .option__item {
+    margin-bottom: 15px;
     margin-left: 8px;
     &:first-child{
     margin-left: 0px;
+    margin-bottom: 0;
     }
 }
 
