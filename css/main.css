@@ -928,6 +928,7 @@ img {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 60px;
 }
 @media screen and (min-width: 1200px) {
   .site-footer__nav-links {
@@ -960,7 +961,6 @@ ul {
 
 .footer-contacts {
   margin-top: 20px;
-  margin-bottom: 60px;
   display: flex;
   font-style: normal;
   flex-direction: column;
@@ -1040,17 +1040,8 @@ ul {
   color: #FFFFFF;
 }
 
-.subscribe {
-  display: block;
-}
-@media screen and (min-width: 768px) {
-  .subscribe {
-    margin: 0 auto;
-  }
-}
 @media screen and (min-width: 1200px) {
   .subscribe {
-    margin: 0;
     margin-left: auto;
   }
 }
@@ -1145,7 +1136,6 @@ ul {
 .option {
   display: flex;
   flex-wrap: wrap;
-  padding-top: 94px;
   padding-bottom: 50px;
 }
 @media screen and (min-width: 768px) {
