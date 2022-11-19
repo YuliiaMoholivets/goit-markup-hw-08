@@ -8,7 +8,7 @@
     
         @media screen and (min-width: 768px) {
             display: flex;
-         
+         align-items: baseline;
             flex-wrap: wrap;
             justify-content: space-around
         }
@@ -17,7 +17,7 @@
             
             
             gap: 70px;
-            align-items: baseline;
+           
         }
 }
 
@@ -70,7 +70,7 @@ ul {
         margin-bottom: 60px;
     
         @media screen and (min-width: 768px) {
-            align-self: flex-start;
+           
             margin-bottom: 0;
         }
     
